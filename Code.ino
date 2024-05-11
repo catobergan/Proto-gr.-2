@@ -145,25 +145,6 @@ void loop() {
 
       pauseJustActivated = false;
     }
-    
-    //brennpunktLeds
-    /*for (int i = 0 ; i < 6 ; i++){
-        if (!brennpunktLock[i]) {
-          if (t == 0) {
-            digitalWrite(brennpunktLedsPin[i], HIGH);
-          } else if (t == 50) {
-            digitalWrite(brennpunktLedsPin[i], LOW);
-          } else if (t == 100) {
-            digitalWrite(brennpunktLedsPin[i], HIGH);
-          } else if (t == 50) {
-            digitalWrite(brennpunktLedsPin[i], LOW);
-          } else if (t == 100) {
-            digitalWrite(brennpunktLedsPin[i], HIGH);
-          }
-        } else {
-          digitalWrite(brennpunktLedsPin[i], LOW);
-        }
-      }*/
 
     //lytt etter brennpunkt input
     for (int i = 0; i < 6; i++) {
@@ -413,7 +394,8 @@ void burn() { //skrur på led ved siden av en allerede tent led.
   strip.show();
 }
 
-void finish() {  
+void finish() {
+  
   for (int i = 0; i < 6; i++) {
     brennpunktLock[i] = false;
     digitalWrite(brennpunktLedsPin[i], LOW);
