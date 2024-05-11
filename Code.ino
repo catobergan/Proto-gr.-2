@@ -3,7 +3,7 @@
 
 #define LED_PIN 2
 
-#define LED_COUNT 78
+#define LED_COUNT 145
 
 Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
 
